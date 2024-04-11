@@ -1,147 +1,271 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- mobile metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <!-- site metas -->
-    <title>HomeCare</title>
-    <meta name="keywords" content="">
+    <meta charset="UTF-8">
     <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <!-- style css -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Medica - Health</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="{% static 'css/core-style.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!-- Responsive-->
+
+    <!-- Responsive CSS -->
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-    <!-- fevicon -->
-    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/gif"/>
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
-    <!-- Tweaks for older IEs-->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <!-- owl stylesheets -->
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-          media="screen">
+
 </head>
 
 <body>
-<!-- header section start -->
-<div class="header_section">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="logo"><a href="{% url 'smo:home' %}"><img
-                src="{% static 'images/logo.png' %}"></a></div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active button">
-                    <a class="nav-link" href="{% url 'smo:home' %}" role="button">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'smo:health' %}">Health</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'smo:medicine' %}">Medicine</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'smo:news' %}">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'smo:clients' %}">Client</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'smo:contact' %}">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'smo:contact' %}">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="{% static 'images/search-icon.png' %}"></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<!-- Preloader -->
+<div id="preloader">
+    <div class="medica-load"></div>
+    <img src="{% static 'img/core-img/plus.png' %}" alt="logo">
 </div>
-<!-- header section end -->
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area">
+    <!-- Main Header Area -->
+    <div class="main-header-area" id="stickyHeader">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 h-100">
+                    <div class="main-menu h-100">
+                        <nav class="navbar h-100 navbar-expand-lg">
+                            <!-- Logo Area  -->
+                            <a class="navbar-brand" href="{% url 'smo:home' %}"><img
+                                    src="{% static 'img/core-img/logo.png' %}"
+                                    alt="Logo"></a>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#medicaMenu" aria-controls="medicaMenu" aria-expanded="false"
+                                    aria-label="Toggle navigation"><i class="fa fa-bars"></i> Menu
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="medicaMenu">
+                                <!-- Menu Area -->
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{% url 'smo:home' %}">Home <span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{% url 'smo:home' %}">Home</a>
+                                            <a class="dropdown-item" href="{% url 'smo:about_us' %}">About Us</a>
+                                            <a class="dropdown-item" href="{% url 'smo:services' %}">Services</a>
+                                            <a class="dropdown-item" href="{% url 'smo:blog' %}">News</a>
+                                            <a class="dropdown-item" href="{% url 'smo:contact' %}">Contact</a>
+                                            <a class="dropdown-item" href="{% url 'smo:elements' %}">Elements</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'smo:about_us' %}">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'smo:services' %}">Services</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'smo:blog' %}">News</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'smo:contact' %}">Contact</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'smo:contact' %}">Contact</a>
+                                    </li>
+                                </ul>
+                                <!-- Search Form -->
+                                <div class="header-search-form ml-auto">
+                                    <form action="#">
+                                        {% csrf_token %}
+                                        <input type="search" class="form-control"
+                                               placeholder="Input your keyword then press enter..." id="search"
+                                               name="search">
+                                        <input class="d-none" type="submit" value="submit">
+                                    </form>
+                                </div>
+                                <!-- Search btn -->
+                                <div id="searchbtn">
+                                    <i class="ti-search" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
 {% block content %}
 
 {% endblock %}
-<!-- footer section start -->
-<footer>
-    <div class="footer_section layout_padding">
+
+<!-- ***** Footer Area Start ***** -->
+<footer class="footer-area">
+    <!-- Main Footer Area -->
+    <div class="main-footer-area section_padding_100 bg-default">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="footer_logo"><a href="{% url 'smo:home' %}"><img
-                            src="{% static 'images/footer-logo.png' %}"></a></div>
-                    <h1 class="adderss_text">Contact Us</h1>
-                    <div class="map_icon"><img src="{% static 'images/map-icon.png' %}"><span class="paddlin_left_0">Page when looking at its</span>
-                    </div>
-                    <div class="map_icon"><img src="{% static 'images/call-icon.png' %}"><span
-                            class="paddlin_left_0">+7586656566</span></div>
-                    <div class="map_icon"><img src="{% static 'images/mail-icon.png' %}"><span
-                            class="paddlin_left_0">volim@gmail.com</span></div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <h1 class="adderss_text">Doctors</h1>
-                    <div class="hiphop_text_1">There are many variations of passages of Lorem Ipsum available, but the
-                        majority have suffered alteration in some form, by injected humour,
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="footer-widget-area">
+                        <div class="footer-logo">
+                            <img src="{% static 'img/core-img/footer-logo.png' %}" alt="">
+                        </div>
+                        <p>Phasellus at nunc orci. Donec ipsum metus, pharetra quis nunc sit amet, maximus vehicula
+                            nibh. Praesent pulvinar porta elit, a commodo erat accumsan sed. Vivamus vel tristique
+                            nibh.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <h1 class="adderss_text">Useful Links</h1>
-                    <div class="Useful_text">There are many variations of passages of Lorem Ipsum available, but the
-                        majority have suffered ,
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="footer-widget-area">
+                        <div class="widget-title">
+                            <h6>Latest News</h6>
+                        </div>
+                        <div class="widget-blog-post">
+                            <!-- Single Blog Post -->
+                            <div class="widget-single-blog-post d-flex">
+                                <div class="widget-post-thumbnail pr-2">
+                                    <img src="{% static 'img/bg-img/fp1.jpg' %}" alt="">
+                                </div>
+                                <div class="widget-post-content">
+                                    <a href="#">A big discovery for medicine</a>
+                                    <p>Dec 02, 2017</p>
+                                </div>
+                            </div>
+                            <!-- Single Blog Post -->
+                            <div class="widget-single-blog-post d-flex">
+                                <div class="widget-post-thumbnail pr-2">
+                                    <img src="{% static 'img/bg-img/fp2.jpg' %}" alt="">
+                                </div>
+                                <div class="widget-post-content">
+                                    <a href="#">Dentistry for everybody</a>
+                                    <p>Dec 02, 2017</p>
+                                </div>
+                            </div>
+                            <!-- Single Blog Post -->
+                            <div class="widget-single-blog-post d-flex">
+                                <div class="widget-post-thumbnail pr-2">
+                                    <img src="{% static 'img/bg-img/fp3.jpg' %}" alt="">
+                                </div>
+                                <div class="widget-post-content">
+                                    <a href="#">When it’s time to take pills</a>
+                                    <p>Dec 02, 2017</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <h1 class="adderss_text">Newsletter</h1>
-                    <input type="text" class="Enter_text" placeholder="Enter your Emil" name="Enter your Emil">
-                    <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-                    <div class="social_icon">
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="footer-widget-area">
+                        <div class="widget-title">
+                            <h6>Usefull links</h6>
+                        </div>
                         <ul>
-                            <li><a href="#"><img src="{% static 'images/fb-icon.png' %}"></a></li>
-                            <li><a href="#"><img src="{% static 'images/twitter-icon.png' %}"></a></li>
-                            <li><a href="#"><img src="{% static 'images/linkedin-icon.png' %}"></a></li>
-                            <li><a href="#"><img src="{% static 'images/instagram-icon.png' %}"></a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Book an Appointment</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Doctors</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Our Partners</a></li>
+                            <li><a href="#">Emergency Cases</a></li>
                         </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="footer-widget-area">
+                        <div class="widget-title">
+                            <h6>contact us</h6>
+                        </div>
+
+                        <div class="widget-contact">
+                            <!-- Single Contact Info -->
+                            <div class="widget-single-contact d-flex align-items-center">
+                                <div class="widget-contact-thumbnail mr-15">
+                                    <img src="{% static 'img/icons/alarm-clock.png' %}" alt="">
+                                </div>
+                                <div class="widget-contact-info">
+                                    <p>Monday - Friday 08:00 - 21:00 <br>Saturday &amp; Sunday - CLOSED</p>
+                                </div>
+                            </div>
+                            <!-- Single Contact Info -->
+                            <div class="widget-single-contact d-flex align-items-center">
+                                <div class="widget-contact-thumbnail mr-15">
+                                    <img src="{% static 'img/icons/map-pin.png' %}" alt="">
+                                </div>
+                                <div class="widget-contact-info">
+                                    <p>Lamas Carbajal Str, no 14-18 <br>41770 Montellano</p>
+                                </div>
+                            </div>
+                            <!-- Single Contact Info -->
+                            <div class="widget-single-contact d-flex align-items-center">
+                                <div class="widget-contact-thumbnail mr-15">
+                                    <img src="{% static 'img/icons/envelope.png' %}" alt="">
+                                </div>
+                                <div class="widget-contact-info">
+                                    <p>0080 673 729 766 <br>contact@business.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Footer Area -->
+    <div class="bottom-footer-area">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <div class="bottom-footer-content h-100 d-md-flex align-items-center justify-content-between">
+
+                        <!-- Footer Menu -->
+                        <div class="footer-menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Doctors</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-<!-- footer section end -->
+<!-- ***** Footer Area End ***** -->
 
-<!-- copyright section start -->
-<div class="copyright_section">
-    <div class="container">
-        <p class="copyright_text">{% now 'Y' %} Nurgo</p>
-    </div>
-</div>
-<!-- copyright section end -->
-<!-- Javascript files-->
-<script src="{% static 'js/jquery.min.js' %}"></script>
+<!-- jQuery (Necessary for All JavaScript Plugins) -->
+<script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+<!-- Popper js -->
 <script src="{% static 'js/popper.min.js' %}"></script>
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
-<script src="{% static 'js/plugin.js' %}"></script>
-<!-- sidebar -->
-<script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
-<script src="{% static 'js/custom.js' %}"></script>
-<!-- javascript -->
-<script src="{% static 'js/owl.carousel.js' %}"></script>
-<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<!-- Bootstrap js -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- Plugins js -->
+<script src="{% static 'js/plugins.js' %}"></script>
+<!-- Active js -->
+<script src="{% static 'js/active.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
+<script src="{% static 'js/map-active.js' %}"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,272 @@
+{% extends 'smo/base.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="breadcumb-area bg-img gradient-background-overlay"
+             style="background-image: url(img/bg-img/hero6.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content">
+                        <!-- Title -->
+                        <h3 class="breadcumb-title">Elements</h3>
+                        <!-- Breadcumb -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Elements</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** Elements Area Start ***** -->
+    <section class="elements-area section_padding_100_0">
+        <div class="container">
+            <div class="row">
+
+                <!-- ========== Buttons ========== -->
+                <div class="col-12">
+                    <div class="elements-title">
+                        <h2>Buttons</h2>
+                    </div>
+                    <!-- medica Button -->
+                    <div class="medica-buttons-area mb-100">
+                        <a href="#" class="btn medica-btn btn-2 m-2">Make an Appointment</a>
+                        <a href="#" class="btn medica-btn btn-3 m-2">Make an Appointment</a>
+                        <a href="#" class="btn medica-btn btn-4 m-2">Make an Appointment</a>
+                        <a href="#" class="btn medica-btn btn-5 m-2">Make an Appointment</a>
+                    </div>
+                </div>
+
+                <!-- ========== Progress Bars & Accordions ========== -->
+                <div class="col-12">
+                    <div class="elements-title">
+                        <h2>Progress Bars &amp; Accordions</h2>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <!-- Progress Bar Content Area -->
+                    <div class="services-progress-bar mb-100">
+                        <!-- Single Progress Bar -->
+                        <div class="single_progress_bar">
+                            <div id="bar1" class="barfiller">
+                                <div class="tipWrap">
+                                    <span class="tip"></span>
+                                </div>
+                                <span class="fill" data-percentage="80"></span>
+                            </div>
+                            <p>Marketing</p>
+                        </div>
+                        <!-- Single Progress Bar -->
+                        <div class="single_progress_bar">
+                            <div id="bar2" class="barfiller">
+                                <div class="tipWrap">
+                                    <span class="tip"></span>
+                                </div>
+                                <span class="fill" data-percentage="90"></span>
+                            </div>
+                            <p>Surgery</p>
+                        </div>
+                        <!-- Single Progress Bar -->
+                        <div class="single_progress_bar">
+                            <div id="bar3" class="barfiller">
+                                <div class="tipWrap">
+                                    <span class="tip"></span>
+                                </div>
+                                <span class="fill" data-percentage="75"></span>
+                            </div>
+                            <p>Radiology</p>
+                        </div>
+                        <!-- Single Progress Bar -->
+                        <div class="single_progress_bar">
+                            <div id="bar4" class="barfiller">
+                                <div class="tipWrap">
+                                    <span class="tip"></span>
+                                </div>
+                                <span class="fill" data-percentage="60"></span>
+                            </div>
+                            <p>Team Work</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="accordions mb-100" id="accordion" role="tablist" aria-multiselectable="true">
+                        <!-- single accordian area -->
+                        <div class="panel single-accordion">
+                            <h6><a role="button" class="" aria-expanded="true" aria-controls="collapseOne"
+                                   data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Donec ipsum
+                                metus, pharetr a quis nunc sit amet, maximus.
+                                <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                            </a></h6>
+                            <div id="collapseOne" class="accordion-content collapse show">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel lectus eu felis
+                                    semper finibus ac eget ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Etiam vulputate id justo quis facilisis.</p>
+                            </div>
+                        </div>
+                        <!-- single accordian area -->
+                        <div class="panel single-accordion">
+                            <h6>
+                                <a role="button" class="collapsed" aria-expanded="true" aria-controls="collapseTwo"
+                                   data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">Maximus vehicula
+                                    nibh. Prae sent pulvinar porta.
+                                    <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                    <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                </a>
+                            </h6>
+                            <div id="collapseTwo" class="accordion-content collapse">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel lectus eu felis
+                                    semper finibus ac eget ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Etiam vulputate id justo quis facilisis.</p>
+                            </div>
+                        </div>
+                        <!-- single accordian area -->
+                        <div class="panel single-accordion">
+                            <h6>
+                                <a role="button" aria-expanded="true" aria-controls="collapseThree" class="collapsed"
+                                   data-parent="#accordion" data-toggle="collapse" href="#collapseThree">Pharetr a quis
+                                    nunc sit amet, maximus vehicula nibh.
+                                    <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                    <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                </a>
+                            </h6>
+                            <div id="collapseThree" class="accordion-content collapse">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel lectus eu felis
+                                    semper finibus ac eget ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Etiam vulputate id justo quis facilisis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== Loaders ========== -->
+                <div class="col-12">
+                    <div class="elements-title">
+                        <h2>Loaders</h2>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <!-- Pie Bars Area -->
+                    <div class="our-skills-area text-center mb-100">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="single-pie-bar" data-percent="75">
+                                    <canvas class="bar-circle" width="100" height="100"></canvas>
+                                    <h6>Hard work</h6>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="single-pie-bar" data-percent="83">
+                                    <canvas class="bar-circle" width="100" height="100"></canvas>
+                                    <h6>Creativity</h6>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="single-pie-bar" data-percent="25">
+                                    <canvas class="bar-circle" width="100" height="100"></canvas>
+                                    <h6>Good luck</h6>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="single-pie-bar" data-percent="95">
+                                    <canvas class="bar-circle" width="100" height="100"></canvas>
+                                    <h6>Development</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== Milestones ========== -->
+                <div class="col-12">
+                    <div class="elements-title">
+                        <h2>Milestones</h2>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="medica-cool-facts-area">
+                        <div class="row">
+                            <!-- Single Cool Fact-->
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="single-cool-fact-area text-center mb-100">
+                                    <h2><span class="counter">8723</span></h2>
+                                    <h6>Pacients since Opening</h6>
+                                </div>
+                            </div>
+                            <!-- Single Cool Fact-->
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="single-cool-fact-area text-center mb-100">
+                                    <h2><span class="counter">120</span></h2>
+                                    <h6>Specialist Doctors</h6>
+                                </div>
+                            </div>
+                            <!-- Single Cool Fact-->
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="single-cool-fact-area text-center mb-100">
+                                    <h2><span class="counter">12</span></h2>
+                                    <h6>Years of Experience</h6>
+                                </div>
+                            </div>
+                            <!-- Single Cool Fact-->
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="single-cool-fact-area text-center mb-100">
+                                    <h2><span class="counter">83</span></h2>
+                                    <h6>Pro Bono Works</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== Icon Boxes ========== -->
+                <div class="col-12">
+                    <div class="elements-title mb-100">
+                        <h2>Icon boxes</h2>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="features-area">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="single-icon-box mb-100">
+                                    <img src="img/icons/blood-donation.png" alt="">
+                                    <h5>Ambulatory Care</h5>
+                                    <p>Phasellus at nunc orci. Donec ipsum metus, pharetr a quis nunc sit amet, maximus
+                                        vehicula nibh.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="single-icon-box mb-100">
+                                    <img src="img/icons/microscope.png" alt="">
+                                    <h5>Laboratory</h5>
+                                    <p>Phasellus at nunc orci. Donec ipsum metus, pharetr a quis nunc sit amet, maximus
+                                        vehicula nibh.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="single-icon-box mb-100">
+                                    <img src="img/icons/stretcher.png" alt="">
+                                    <h5>Ambulance Service</h5>
+                                    <p>Phasellus at nunc orci. Donec ipsum metus, pharetr a quis nunc sit amet, maximus
+                                        vehicula nibh.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Elements Area End ***** -->
+
+{% endblock %}

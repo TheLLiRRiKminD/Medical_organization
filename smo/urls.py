@@ -6,9 +6,9 @@ app_name = SmoConfig.name
 
 urlpatterns = [
     path('home/', views.home, name='home'),
-    path('health/', views.health, name='health'),
-    path('medicine/', views.medicine, name='medicine'),
-    path('news/', views.news, name='news'),
-    path('clients/', views.clients, name='clients'),
+    path('about_us/', views.about_us, name='about_us'),
+    path('services/', views.ServicesListView.as_view(), name='services'),
+    path('blog/', views.blog, name='blog'),
     path('contact/', views.contact, name='contact'),
+    path('elements/', views.elements, name='elements'),
 ]

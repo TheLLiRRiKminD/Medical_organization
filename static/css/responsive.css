@@ -1,594 +1,199 @@
-/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
-
-
-/*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
-
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .hero-slides-content h2 {
+        font-size: 50px
+    }
+    .hero-area .owl-dots {
+        width: 930px
+    }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .header-search {
-        padding: 15px 0px;
+    .hero-slides-content h2 {
+        font-size: 50px
     }
-}
-
-
-/*------------------------------------------------------------------- 767px x 599px ---------------------------------------------------------------------*/
-
-@media only screen and (min-width: 599px) and (max-width: 767px) {
-    .logo {
-        text-align: center;
+    .hero-area .owl-dots {
+        width: 690px
     }
-    .cart-content-right {
-        padding-bottom: 5px;
+    .hero-area,
+    .single-hero-slide {
+        height: 600px !important
     }
-    .mg {
-        margin: 0px 0px;
+    .top-header-social-info a {
+        margin-right: 10px
     }
-    .menu-area-main {
-        height: 256px;
-        overflow-y: auto;
+    .navbar {
+        padding: 0
     }
-    .megamenu>.row [class*="col-"] {
-        padding: 0px;
-    }
-    .menu-area-main .megamenu .men-cat {
-        padding: 0px 15px;
-    }
-    .menu-area-main .megamenu .women-cat {
-        padding: 0px 15px;
-    }
-    .menu-area-main .megamenu .el-cat {
-        padding: 0px 15px;
-    }
-    .mean-container .mean-nav ul li a.mean-expand {
-        height: 19px;
-    }
-    .category-box.women-box {
-        display: none;
-    }
-    .cart-box {
-        display: inline-block;
-        margin: 0px 30px;
-    }
-    .wish-box {
-        float: none;
-        margin: 0px 30px;
-        display: inline-block;
-    }
-    .menu-add {
-        display: none;
-    }
-    .category-box {
-        display: none;
-    }
-    .mean-container .mean-nav ul li ol {
-        padding: 0px;
-    }
-    .mean-container .mean-nav ul li a {
-        padding: 10px 20px;
-        width: 94.8%;
-    }
-    .mean-container .mean-nav ul li li a {
-        width: 92%;
-        padding: 1em 4%;
-    }
-    .mean-container .mean-nav ul li li li a {
-        width: 100%;
-    }
-    .header-search {
-        padding: 15px 0px;
-    }
-    #collapseFilter.d-md-block {
-        padding: 30px 0px;
-    }
-}
-
-
-/*------------------------------------------------------------------- 599px x 280px ---------------------------------------------------------------------*/
-
-@media only screen and (min-width: 280px) and (max-width: 599px) {
-    .cart-content-right {
-        padding-bottom: 5px;
-    }
-    .megamenu>.row [class*="col-"] {
-        padding: 0px;
-    }
-    .menu-area-main .megamenu .men-cat {
-        padding: 0px 15px;
-    }
-    .menu-area-main .megamenu .women-cat {
-        padding: 0px 15px;
-    }
-    .menu-area-main .megamenu .el-cat {
-        padding: 0px 15px;
-    }
-    .mean-container .mean-nav ul li a {
-        padding: 1em 4%;
-        width: 92%;
-    }
-    .mean-container .mean-nav ul li li a {
-        width: 90%;
-        padding: 1em 5%;
-    }
-    .mean-container .sub-full.megamenu-categories ol li a {
-        padding: 5px 0px;
-        text-transform: capitalize;
-        width: 100%;
-    }
-    .megamenu .sub-full.megamenu-categories .women-box .banner-up-text a {
-        width: auto;
+    .navbar-toggler {
+        font-size: 14px;
+        background-color: transparent;
         border: none;
-        float: none;
+        border-radius: 6px;
+        height: 35px;
+        margin: 33px 0;
+        border: 2px solid #262626
     }
-    .menu-area-main {
-        height: 45px;
-        overflow-y: auto;
+    #medicaMenu {
+        margin-top: -2px;
+        padding: 30px;
+        background-color: #fff;
+        z-index: 1002;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15)
     }
-    .mean-container .mean-nav ul li a.mean-expand {
-        top: 0;
+    .header-area .main-menu .nav-link {
+        padding: 5px 15px
+    }
+    .header-search-form form input {
+        width: 570px;
+        margin-bottom: 15px
+    }
+    .medica-appointment-thumb,
+    .medica-about-thumbnail,
+    .medica-blog-sidebar-area {
+        margin-top: 100px
+    }
+    .footer-menu li a {
+        padding: 0 10px
+    }
+    .breadcumb-area {
+        height: 200px
+    }
+    .contact-form {
+        margin-bottom: 100px
     }
 }
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    .navbar {
-        padding: .5rem 30px;
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .top-header-area {
+        height: auto;
+        padding: 10px 0
     }
-    .header_section {
-        background-size: cover;
+    .header-area {
+        height: auto
     }
-    .banner_taital {
-        padding-top: 60px;
+    .top-menu ul li a {
+        padding: 0 5px;
+        font-size: 12px
     }
-    .image_main::after {
-        height: 390px;
-    }
-    .knowledge_section {
-        padding-top: 100px;
-        padding-bottom: 175px;
-    }
-    .Useful_text {
-        width: 65%;
-    }
-    .paddlin_left_0 {
-        padding-left: 10px;
-    }
-    .map_icon {
-        font-size: 15px;
-    }
-    #my_slider a.carousel-control-next {
-        left: 335px;
-        top: 72%;
-    }
-    #my_slider a.carousel-control-prev {
-        left: 335px;
-        top: 84%;
-    }
-    .client_right {
-        padding-top: 10px;
-    }
-    .contact_section {
-        background-size: cover;
-    }
-    .daily_text_1 {
-        width: 70%;
-    }
-    .daily_text {
-        width: 40%;
-    }
-    .logo {
-    width: 24%;
-    float: left;
-}
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .header_section {
-        background-size: cover;
-    }
-    .logo {
-        width: 50%;
-    }
-    .navbar-expand-lg .navbar-nav .nav-link {
-        display: block;
-        color: #272a2a;
-        text-align: center;
-    }
-    .navbar-light .navbar-nav .nav-link:focus,
-    .navbar-light .navbar-nav .nav-link:hover {
-        color: #15e4d0;
-    }
-    .nav-link {
-        display: none;
+    .top-header-social-info {
+        margin-bottom: 10px;
+        margin-left: 5px
     }
     .navbar {
-        padding: .5rem 15px;
+        padding: 0
     }
-    .banner_taital {
-        font-size: 50px;
-        padding-top: 50px;
-    }
-    .contact_bt {
-        width: 135px;
-    }
-    .more_bt {
-        width: 135px;
-    }
-    .more_bt a {
-        padding: 7px 0px;
-    }
-    .contact_bt a {
-        padding: 7px 0px;
-    }
-    .image_1 {
-        padding-top: 30px;
-    }
-    .health_taital {
-        font-size: 34px;
-    }
-    .health_text {
+    .navbar-toggler {
         font-size: 14px;
+        background-color: transparent;
+        border: none;
+        border-radius: 6px;
+        height: 35px;
+        margin: 18px 0;
+        border: 2px solid #262626
     }
-    .text {
-        padding: 12px 12px;
+    #medicaMenu {
+        margin-top: -2px;
+        padding: 30px;
+        background-color: #fff;
+        z-index: 1002;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15)
     }
-    .image_main::after {
-        display: none;
+    .header-area .main-menu .nav-link {
+        padding: 5px 15px
     }
-    .main {
-        margin: 40px 0px 0px 5px;
+    .navbar-brand {
+        max-width: 100px
     }
-    .middle {
-        left: 50%;
-    }
-    .getquote_bt_1 {
-        margin-top: 30px;
-    }
-    .knowledge_section {
-        background-size: cover;
-        padding: 100px 0px;
-    }
-    .left_main {
+    .header-search-form form input {
         width: 100%;
-    }
-    .knowledge_taital {
-        font-size: 36px;
-    }
-    .play_icon {
-        display: none;
-    }
-    .box_main {
-        margin-bottom: 30px;
-    }
-    .getquote_bt a {
-        margin-top: 0px;
-    }
-    .contact_section {
-        background-size: cover;
-        padding-bottom: 90px;
-    }
-    .contact_taital {
-        font-size: 40px;
-    }
-    .diabetes_text {
-        width: 100%;
-        font-size: 20px;
-    }
-    .icon_7 {
-        width: 30%;
-    }
-    .book_text {
-        font-size: 24px;
-    }
-    .contact_box {
-        margin-top: 30px;
-    }
-    .client_taital {
-        font-size: 30px;
-    }
-    .client_left {
-        width: 100%;
-    }
-    .client_right {
-        width: 100%;
-    }
-    .distracted_text {
-        font-size: 36px;
-    }
-    #my_slider a.carousel-control-next {
-        display: none;
-    }
-    #my_slider a.carousel-control-prev {
-        display: none;
-    }
-    .Useful_text {
-        width: 60%;
-    }
-    .daily_text_1 {
-        width: 50%;
-    }
-    .daily_text {
-        width: 40%;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-    #main_slider a.carousel-control-prev {
-        position: absolute;
-        left: 175px;
-        top: 90%;
-        display: none;
-    }
-    #main_slider a.carousel-control-next {
-        position: absolute;
-        left: 236px;
-        top: 90%;
-        display: none;
-    }
-    .header_section {
-        background-size: cover;
-    }
-    .logo {
-        width: 50%;
-    }
-    .costum_menu {
-        display: none;
-    }
-    .navbar-expand-lg .navbar-nav .nav-link {
-        display: block;
-        color: #272a2a;
-        text-align: center;
-    }
-    .navbar-light .navbar-nav .nav-link:focus,
-    .navbar-light .navbar-nav .nav-link:hover {
-        color: #15e4d0;
-    }
-    .nav-link {
-        display: none;
-    }
-    .navbar {
-        padding: .5rem 15px;
-    }
-    .banner_taital {
-        font-size: 50px;
-        padding-top: 50px;
-    }
-    .contact_bt {
-        width: 135px;
-    }
-    .more_bt {
-        width: 135px;
-    }
-    .more_bt a {
-        padding: 7px 0px;
-    }
-    .contact_bt a {
-        padding: 7px 0px;
-    }
-    .image_1 {
-        padding-top: 30px;
-    }
-    .health_taital {
-        font-size: 34px;
-    }
-    .health_text {
-        font-size: 14px;
-    }
-    .text {
-        padding: 12px 12px;
-    }
-    .image_main::after {
-        display: none;
-    }
-    .main {
-        margin: 40px 0px 0px 5px;
-    }
-    .middle {
-        left: 50%;
-    }
-    .getquote_bt_1 {
-        margin-top: 30px;
-    }
-    .knowledge_section {
-        background-size: cover;
-        padding: 90px 0px;
-    }
-    .left_main {
-        width: 100%;
-    }
-    .knowledge_taital {
-        font-size: 36px;
-    }
-    .play_icon {
-        display: none;
-    }
-    .box_main {
-        margin-bottom: 30px;
-    }
-    .getquote_bt a {
-        margin-top: 0px;
-    }
-    .contact_section {
-        background-size: cover;
-        padding-bottom: 90px;
-    }
-    .contact_taital {
-        font-size: 40px;
-    }
-    .diabetes_text {
-        width: 100%;
-        font-size: 20px;
-    }
-    .icon_7 {
-        width: 30%;
-    }
-    .book_text {
-        font-size: 24px;
-    }
-    .contact_box {
-        margin-top: 30px;
-    }
-    .client_taital {
-        font-size: 30px;
-    }
-    .client_left {
-        width: 100%;
-    }
-    .client_right {
-        width: 100%;
-    }
-    .distracted_text {
-        font-size: 36px;
-    }
-    #my_slider a.carousel-control-next {
-        display: none;
-    }
-    #my_slider a.carousel-control-prev {
-        display: none;
-    }
-    .Useful_text {
-        width: 60%;
-    }
-    .daily_text_1 {
-        width: 100%;
-    }
-    .daily_text {
-        width: 70%;
-    }
-}
-
-@media (max-width: 575px) {
-    #main_slider a.carousel-control-prev {
-        position: absolute;
-        left: 175px;
-        top: 90%;
-        display: none;
-    }
-    #main_slider a.carousel-control-next {
-        position: absolute;
-        left: 236px;
-        top: 90%;
-        display: none;
-    }
-    .header_section {
-        background-size: cover;
-    }
-    .logo {
-        width: 50%;
-    }
-    .costum_menu {
-        display: none;
-    }
-    .navbar-expand-lg .navbar-nav .nav-link {
-        display: block;
-        color: #272a2a;
-        text-align: center;
-    }
-    .navbar-light .navbar-nav .nav-link:focus,
-    .navbar-light .navbar-nav .nav-link:hover {
-        color: #15e4d0;
-    }
-    .nav-link {
-        display: none;
-    }
-    .navbar {
-        padding: .5rem 15px;
-    }
-    .banner_taital {
-        font-size: 50px;
-        padding-top: 50px;
-    }
-    .contact_bt {
-        width: 135px;
-    }
-    .more_bt {
-        width: 135px;
-    }
-    .more_bt a {
-        padding: 7px 0px;
-    }
-    .contact_bt a {
-        padding: 7px 0px;
-    }
-    .image_1 {
-        padding-top: 30px;
-    }
-    .health_taital {
-        font-size: 19px;
-    }
-    .health_text {
-        font-size: 14px;
-    }
-    .text {
-        padding: 12px 12px;
-    }
-    .image_main::after {
-        display: none;
-    }
-    .main {
-        margin: 40px 0px 0px 5px;
-    }
-    .middle {
-        left: 50%;
-    }
-    .getquote_bt_1 {
-        margin-top: 30px;
-    }
-    .knowledge_section {
-        background-size: cover;
-        padding: 90px 0px;
-    }
-    .left_main {
-        width: 100%;
-    }
-    .knowledge_taital {
-        font-size: 27px;
-    }
-    .play_icon {
-        display: none;
-    }
-    .box_main {
-        margin-bottom: 30px;
-    }
-    .getquote_bt a {
-        margin-top: 0px;
-    }
-    .daily_text_1 {
-        width: 60%;
-    }
-    .contact_section {
-        background-size: cover;
-        padding-bottom: 90px;
-    }
-    .contact_taital {
-        font-size: 40px;
-    }
-    .diabetes_text {
-        width: 100%;
-        font-size: 20px;
-    }
-    .icon_7 {
-        width: 30%;
-    }
-    .book_text {
-        font-size: 24px;
-    }
-    .contact_box {
-        margin-top: 30px;
-    }
-    .client_taital {
-        font-size: 30px;
-    }
-    .client_left {
-        width: 100%;
-    }
-    .client_right {
-        width: 100%;
-    }
-    .distracted_text {
-        font-size: 36px;
-    }
-    #my_slider a.carousel-control-next {
-        display: none;
-    }
-    #my_slider a.carousel-control-prev {
-        display: none;
+        margin-bottom: 15px;
+        font-size: 10px
+    }
+    .hero-slides-content h2 {
+        font-size: 30px
+    }
+    .hero-area .owl-dots {
+        width: 90%
+    }
+    .hero-area,
+    .single-hero-slide {
+        height: 500px !important
+    }
+    .hero-slides-content h5 {
+        font-size: 16px
+    }
+    .hero-area .owl-prev,
+    .hero-area .owl-next,
+    .medica-testimonials-area .owl-prev,
+    .medica-testimonials-area .owl-next {
+        width: 30px;
+        height: 30px;
+        line-height: 26px;
+        left: 20px;
+        margin-top: -15px
+    }
+    .hero-area .owl-next,
+    .medica-testimonials-area .owl-next {
+        left: auto;
+        right: 20px
+    }
+    .medica-btn {
+        height: 50px;
+        padding: 0 10px;
+        line-height: 46px;
+        font-size: 13px;
+        min-width: 100px
+    }
+    .medica-btn:hover,
+    .medica-btn:focus {
+        font-size: 13px
+    }
+    .medica-about-text ul li {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+        max-width: 100%
+    }
+    .medica-appointment-thumb,
+    .medica-about-thumbnail {
+        margin-top: 100px
+    }
+    .section_heading h2 {
+        font-size: 30px
+    }
+    .copywrite-text {
+        text-align: center
+    }
+    .bottom-footer-area {
+        padding: 15px 0;
+        height: auto
+    }
+    .footer-menu li a {
+        padding: 0 5px
+    }
+    .copywrite-text {
+        margin-bottom: 10px
+    }
+    .main-header-area {
+        height: 70px
+    }
+    .footer-menu ul {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center
+    }
+    .breadcumb-area {
+        height: 150px
+    }
+    .cta-content {
+        margin-bottom: 50px
+    }
+    .medica-services-sidebar-area,
+    .contact-form {
+        margin-bottom: 100px
+    }
+    .medica-blog-sidebar-area {
+        margin-top: 100px
+    }
+    .single-pie-bar {
+        margin-bottom: 30px
     }
 }
