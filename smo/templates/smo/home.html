@@ -72,7 +72,7 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-contact-info d-flex align-items-center">
                         <div class="contact-icon mr-30">
-                            <img src="img/icons/alarm-clock.png" alt="">
+                            <img src="{% static 'img/icons/alarm-clock.png' %}" alt="">
                         </div>
                         <div class="contact-meta">
                             <p>Monday - Friday 08:00 - 21:00 <br> Saturday and Sunday - CLOSED</p>
@@ -82,7 +82,7 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-contact-info d-flex align-items-center">
                         <div class="contact-icon mr-30">
-                            <img src="img/icons/envelope.png" alt="">
+                            <img src="{% static 'img/icons/envelope.png' %}" alt="">
                         </div>
                         <div class="contact-meta">
                             <p>0080 673 729 766 | 0080 234 5678 900 <br> contact@business.com</p>
@@ -92,7 +92,7 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-contact-info d-flex align-items-center">
                         <div class="contact-icon mr-30">
-                            <img src="img/icons/map-pin.png" alt="">
+                            <img src="{% static 'img/icons/map-pin.png' %}" alt="">
                         </div>
                         <div class="contact-meta">
                             <p>Lamas Carbajal Str, no 14-18 <br> 41770 Montellano</p>
@@ -165,21 +165,16 @@
                                 nulla. Morbi eget ornare dui. Donec nec fringilla mi. Pellentesque molestie consequat
                                 felis vitae elementum. Proin ut tempor urna.</p>
                             <ul>
-                                <li>Cardiovascular Diseases</li>
-                                <li>Neonatology</li>
-                                <li>Ophthalmology</li>
-                                <li>Toracic Surgery</li>
-                                <li>Gastroenterology</li>
-                                <li>Plastic Surgery</li>
-                                <li>Neurology</li>
-                                <li>Ortopedy</li>
+                                {% for object in services %}
+                                    <li>{{ object.title }}</li>
+                                {% endfor %}
                             </ul>
-                            <a href="#" class="btn medica-btn btn-2">Read More</a>
+                            <a href="{% url 'smo:services' %}" class="btn medica-btn btn-2">Read More</a>
                         </div>
                     </div>
                     <div class="col-12 col-lg-5">
                         <div class="medica-about-thumbnail">
-                            <img src="img/bg-img/doctor.png" alt="">
+                            <img src="{% static 'img/bg-img/doctor.png' %}" alt="">
                         </div>
                     </div>
                 </div>
@@ -195,64 +190,25 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section_heading white-heading">
-                        <img src="img/icons/hospital2.png" alt="">
+                        <img src="{% static 'img/icons/hospital2.png' %}" alt="">
                         <h2>Our Services</h2>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.2s">
-                        <img src="img/icons/hospital.png" alt="">
-                        <h5>Ambulatory Care</h5>
-                        <p>Phasellus at nunc orci. Donec ipsum metus, pharetr a quis nunc sit amet, maximus vehicula
-                            nibh.</p>
+                {% for object in services %}
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-service-area wow fadeInUp" data-wow-delay="0.2s">
+                            <img src="/media/{{ object.icon }}" alt="">
+                            <h5>{{ object.title }}</h5>
+                            <p>{{ object.content }}</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.3s">
-                        <img src="img/icons/blood.png" alt="">
-                        <h5>Laboratory</h5>
-                        <p>Phasellus at nunc orci. Donec ipsum metus, pharetr a quis nunc sit amet, maximus vehicula
-                            nibh.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.4s">
-                        <img src="img/icons/ambulance.png" alt="">
-                        <h5>Ambulance Service</h5>
-                        <p>Phasellus at nunc orci. Donec ipsum metus, pharetr a quis nunc sit amet, maximus vehicula
-                            nibh.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.5s">
-                        <img src="img/icons/nuclear.png" alt="">
-                        <h5>Radiology</h5>
-                        <p>Phasellus at nunc orci. Donec ipsum metus, pharetr a quis nunc sit amet, maximus vehicula
-                            nibh.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.6s">
-                        <img src="img/icons/emergency-call.png" alt="">
-                        <h5>Emergency Care</h5>
-                        <p>Phasellus at nunc orci. Donec ipsum metus, pharetr a quis nunc sit amet, maximus vehicula
-                            nibh.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="single-service-area">
-                        <img src="img/icons/medicine.png" alt="">
-                        <h5>Pharmacy</h5>
-                        <p>Phasellus at nunc orci. Donec ipsum metus, pharetr a quis nunc sit amet, maximus vehicula
-                            nibh.</p>
-                    </div>
-                </div>
+                {% endfor %}
 
                 <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.9s">
-                    <a href="#" class="btn medica-btn">See All Services</a>
+                    <a href="{% url 'smo:services' %}" class="btn medica-btn">See All Services</a>
                 </div>
             </div>
         </div>

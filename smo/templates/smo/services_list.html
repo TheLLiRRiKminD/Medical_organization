@@ -41,21 +41,16 @@
                         <div class="medica-department-card">
                             <h5>Our Departments</h5>
                             <ul class="department-menu">
-                                <li><a href="#">Radiology</a></li>
-                                <li><a href="#">Cardiology</a></li>
-                                <li><a href="#">Gastroenterology</a></li>
-                                <li><a href="#">Neurology</a></li>
-                                <li><a href="#">General surgery</a></li>
-                                <li><a href="#">Haematology</a></li>
-                                <li><a href="#">Nutrition</a></li>
-                                <li><a href="#">Obstetrics</a></li>
-                                <li><a href="#">Ophthalmology</a></li>
+                                {% for object in object_list %}
+                                    <li><a href="#">{{ object.title }}</a></li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <!-- Medica Appointment Card -->
                         <div class="medica-appointment-card">
                             <h5>Book an apppointment</h5>
                             <form action="#" method="post">
+                                {% csrf_token %}
                                 <div class="form-group">
                                     <input type="text" class="form-control text-white" name="name" id="name"
                                            placeholder="Name">

@@ -7,4 +7,5 @@ from smo.models import Services
 
 @admin.register(Services)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'image',)
+    list_display = ('id', 'title', 'image', 'icon')
+

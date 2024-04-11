@@ -1,15 +1,22 @@
 from django.shortcuts import render
-from django.views.generic import ListView
-
+from django.views.generic import ListView, View
 from smo.models import Services
+from users.models import User, Doctor
 
 
-def home(request):
-    return render(request, 'smo/home.html')
+class HomeView(View):
+
+    def get(self, request):
+        doctors = Doctor.objects.all()
+        services = Services.objects.all()
+        return render(request, 'smo/home.html', {'doctors': doctors, 'services': services})
 
 
-def about_us(request):
-    return render(request, 'smo/about-us.html')
+class AboutUsView(View):
+    def get(self, request):
+        doctors = Doctor.objects.all()
+        services = Services.objects.all()
+        return render(request, 'smo/about-us.html', {'doctors': doctors, 'services': services})
 
 
 class ServicesListView(ListView):

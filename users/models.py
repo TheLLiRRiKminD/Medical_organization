@@ -21,3 +21,27 @@ class User(AbstractUser):
     class Meta:
         verbose_name = 'Пользователь'
         verbose_name_plural = 'Пользователи'
+
+
+class Speciality(models.Model):
+    title = models.CharField(max_length=50, verbose_name='Специализация', **NULLABLE)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Специализация'
+        verbose_name_plural = 'Специализации'
+
+
+class Doctor(models.Model):
+    name = models.CharField(max_length=35, verbose_name='Имя')
+    photo = models.ImageField(upload_to='user/doctor', verbose_name='фото', **NULLABLE)
+    speciality = models.ForeignKey(Speciality, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Доктор'
+        verbose_name_plural = 'Доктора'
