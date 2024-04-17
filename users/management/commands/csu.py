@@ -12,9 +12,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         user = User.objects.create(
-            email="kill2002@mail.ru",
-            first_name="Кирилл",
-            last_name="Серебряков",
+            email=f"{os.getenv('EMAIL_ADDRESS')}",
             is_staff=True,
             is_superuser=True
         )
