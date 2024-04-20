@@ -82,7 +82,7 @@
                                         <a class="nav-link" href="{% url 'smo:contact' %}">Contact</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="">Login</a>
+                                        <a class="nav-link" href="{% url 'smo:apppointment' %}">Make an apppointment</a>
                                     </li>
                                 </ul>
                                 <!-- Search Form -->
@@ -174,14 +174,10 @@
                             <h6>Usefull links</h6>
                         </div>
                         <ul>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Book an Appointment</a></li>
-                            <li><a href="#">Contacts</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">Doctors</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Our Partners</a></li>
-                            <li><a href="#">Emergency Cases</a></li>
+                            <li><a href="{% url 'smo:apppointment' %}">Book an Appointment</a></li>
+                            <li><a href="{% url 'smo:contact' %}">Contacts</a></li>
+                            <li><a href="{% url 'smo:about_us' %}">Doctors</a></li>
+                            <li><a href="{% url 'smo:services' %}">Services</a></li>
                         </ul>
                     </div>
                 </div>

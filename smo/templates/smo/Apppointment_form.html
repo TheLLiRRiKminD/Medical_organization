@@ -3,18 +3,18 @@
 {% block content %}
 
     <section class="breadcumb-area bg-img gradient-background-overlay"
-             style="background-image: url({% static 'img/bg-img/hero3.jpg' %});">
+             style="background-image: url({% static 'img/bg-img/hero5.jpg' %});">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcumb-content">
                         <!-- Title -->
-                        <h3 class="breadcumb-title">Services</h3>
+                        <h3 class="breadcumb-title">Make an appointment</h3>
                         <!-- Breadcumb -->
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{% url 'smo:home' %}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Services</li>
+                                <li class="breadcrumb-item active" aria-current="page">Make an appointment</li>
                             </ol>
                         </nav>
                     </div>
@@ -23,27 +23,35 @@
         </div>
     </section>
 
-
-    <section class="medica-services-area section_padding_100">
+    <section class="medica-contact-area section_padding_100">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="medica-services-sidebar-area">
+                <!-- Contact Form Area -->
+                <div class="col-12 col-lg-8">
+                    <div class="contact-form">
+                        <h5 class="mb-50">Make an appointment</h5>
+
+                        <form action="" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn medica-btn btn-3 mt-3">Записаться на прием</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <div class="content-sidebar">
                         <!-- Medica Emergency Card -->
-                        <div class="medica-emergency-card">
+                        <div class="medica-emergency-card mb-4">
                             <h5>For Emergencies</h5>
                             <h4>+0080 954 4557 884</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis id explicabo quam
-                                quo nisi nihil ducimus, possimus. Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <!-- Medica Appointment Card -->
-                        <div class="medica-appointment-card">
-                            <h5>Book an apppointment</h5>
-
-                            <button class="btn medica-btn mt-15"><a href="{% url 'smo:apppointment' %}">Make an
-                                Appointment</a>
-                            </button>
-
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                         <!-- Medica Appointment Card -->
                         <div class="medica-contact-card">
@@ -76,26 +84,10 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-12 col-md-6 col-lg-8">
-                    <div class="all-services">
-                        <div class="row">
-                            <!-- Single Service -->
-                            {% for object in object_list %}
-                                <div class="col-12 col-lg-6">
-                                    <div class="single-service">
-                                        <img src="/media/{{ object.image }}" alt="">
-                                        <h5>{{ object.title }}</h5>
-                                        <p>{{ object.content }}</p>
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
+
 {% endblock %}
+

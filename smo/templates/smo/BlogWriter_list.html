@@ -3,7 +3,7 @@
 {% block content %}
 
     <section class="breadcumb-area bg-img gradient-background-overlay"
-             style="background-image: url(img/bg-img/hero4.jpg);">
+             style="background-image: url({% static 'img/bg-img/hero4.jpg' %});">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -13,7 +13,7 @@
                         <!-- Breadcumb -->
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{% url 'smo:home' %}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">News</li>
                             </ol>
                         </nav>
@@ -29,95 +29,29 @@
             <div class="row">
 
                 <div class="col-12 col-lg-8">
-
-                    <!-- Single Blog Area Start  -->
-                    <div class="single-blog-area">
-                        <!-- Post Thumb -->
-                        <div class="post-thumb">
-                            <img src="img/blog-img/1.jpg" alt="">
-                            <!-- Post Date -->
-                            <div class="post-date">
-                                <a href="#">Dec 05, 2017</a>
+                    {% for object in object_list %}
+                        {% if object.is_published %}
+                            <!-- Single Blog Area Start  -->
+                            <div class="single-blog-area">
+                                <!-- Post Thumb -->
+                                <div class="post-thumb">
+                                    <img src="/media/{{ object.image }}" alt="">
+                                    <!-- Post Date -->
+                                    <div class="post-date">
+                                        <a>{{ object.date_of_creation }}</a>
+                                    </div>
+                                </div>
+                                <!-- Post Content -->
+                                <div class="post-content">
+                                    <h4>{{ object.title }}</h4>
+                                    <div class="post-meta mb-30 d-flex align-items-center">
+                                        <p class="author mb-0">Author:<a href="#"> {{ object.owner }}</a> |</p>
+                                    </div>
+                                    <p>{{ object.content }}</p>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Post Content -->
-                        <div class="post-content">
-                            <h4>New plastic surgery department from january ‘18</h4>
-                            <div class="post-meta mb-30 d-flex align-items-center">
-                                <p class="author mb-0">Author:<a href="#"> Loredana Papp</a> |</p>
-                                <p class="author mb-0">in<a href="#"> Medicine Breacktrough</a> |</p>
-                                <p class="author mb-0"><a href="#">3 Comments</a></p>
-                            </div>
-                            <p>Phasellus at nunc orci. Donec ipsum metus, pharetra quis nunc sit amet, maximus vehicula
-                                nibh. Praesent pulvinar porta elit, a commodo erat. Phasellus at nunc orci. Donec ipsum
-                                metus, pharetra quis nunc sit amet, maximus vehicula nibh. Praesent pulvinar porta elit,
-                                a commodo erat.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Blog Area Start  -->
-                    <div class="single-blog-area">
-                        <!-- Post Thumb -->
-                        <div class="post-thumb">
-                            <img src="img/blog-img/2.jpg" alt="">
-                            <!-- Post Date -->
-                            <div class="post-date">
-                                <a href="#">Dec 05, 2017</a>
-                            </div>
-                        </div>
-                        <!-- Post Content -->
-                        <div class="post-content">
-                            <h4>Let us introduce you our new team</h4>
-                            <div class="post-meta mb-30 d-flex align-items-center">
-                                <p class="author mb-0">Author:<a href="#"> Loredana Papp</a> |</p>
-                                <p class="author mb-0">in<a href="#"> Medicine Breacktrough</a> |</p>
-                                <p class="author mb-0"><a href="#">3 Comments</a></p>
-                            </div>
-                            <p>Phasellus at nunc orci. Donec ipsum metus, pharetra quis nunc sit amet, maximus vehicula
-                                nibh. Praesent pulvinar porta elit, a commodo erat. Phasellus at nunc orci. Donec ipsum
-                                metus, pharetra quis nunc sit amet, maximus vehicula nibh. Praesent pulvinar porta elit,
-                                a commodo erat.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Blog Area Start  -->
-                    <div class="single-blog-area">
-                        <!-- Post Thumb -->
-                        <div class="post-thumb">
-                            <img src="img/blog-img/3.jpg" alt="">
-                            <!-- Post Date -->
-                            <div class="post-date">
-                                <a href="#">Dec 05, 2017</a>
-                            </div>
-                        </div>
-                        <!-- Post Content -->
-                        <div class="post-content">
-                            <h4>New techniques to perform surgery</h4>
-                            <div class="post-meta mb-30 d-flex align-items-center">
-                                <p class="author mb-0">Author:<a href="#"> Loredana Papp</a> |</p>
-                                <p class="author mb-0">in<a href="#"> Medicine Breacktrough</a> |</p>
-                                <p class="author mb-0"><a href="#">3 Comments</a></p>
-                            </div>
-                            <p>Phasellus at nunc orci. Donec ipsum metus, pharetra quis nunc sit amet, maximus vehicula
-                                nibh. Praesent pulvinar porta elit, a commodo erat. Phasellus at nunc orci. Donec ipsum
-                                metus, pharetra quis nunc sit amet, maximus vehicula nibh. Praesent pulvinar porta elit,
-                                a commodo erat.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-
-                    <!-- Pagination Area -->
-                    <div class="pagination-area">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
 
                 <div class="col-12 col-lg-4">

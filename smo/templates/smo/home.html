@@ -16,7 +16,7 @@
                                 <h5 data-animation="fadeInUp" data-delay="400ms">More than 30 professionals</h5>
                                 <div class="slide-btn-group mt-50" data-animation="fadeInUp" data-delay="700ms">
                                     <a href="#" class="btn medica-btn">Make an Appointment</a>
-                                    <a href="#" class="btn medica-btn ml-2 btn-2">Read More</a>
+                                    <a href="{% url 'smo:about_us' %}" class="btn medica-btn ml-2 btn-2">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                                 <h5 data-animation="fadeInUp" data-delay="400ms">More than 30 professionals</h5>
                                 <div class="slide-btn-group mt-50" data-animation="fadeInUp" data-delay="700ms">
                                     <a href="#" class="btn medica-btn">Make an Appointment</a>
-                                    <a href="#" class="btn medica-btn ml-2 btn-2">Read More</a>
+                                    <a href="{% url 'smo:about_us' %}" class="btn medica-btn ml-2 btn-2">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                                 <h5 data-animation="fadeInUp" data-delay="400ms">More than 30 professionals</h5>
                                 <div class="slide-btn-group mt-50" data-animation="fadeInUp" data-delay="700ms">
                                     <a href="#" class="btn medica-btn">Make an Appointment</a>
-                                    <a href="#" class="btn medica-btn ml-2 btn-2">Read More</a>
+                                    <a href="{% url 'smo:about_us' %}" class="btn medica-btn ml-2 btn-2">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -131,21 +131,9 @@
                     <div class="col-12 col-lg-4">
                         <div class="medica-appointment-card wow fadeInUp" data-wow-delay="0.6s">
                             <h5>Book an apppointment</h5>
-                            <form action="#" method="post">
-                                <div class="form-group">
-                                    <input type="text" class="form-control text-white" name="name" id="name"
-                                           placeholder="Name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="number" id="number"
-                                           placeholder="Phone">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                           placeholder="E-mail">
-                                </div>
-                                <button type="submit" class="btn medica-btn mt-15">Make an Appointment</button>
-                            </form>
+                            
+                                <button type="submit" class="btn medica-btn mt-15"><a href="{% url 'smo:apppointment' %}">Make an Appointment</a></button>
+                            
                         </div>
                     </div>
                 </div>
@@ -227,72 +215,21 @@
                     </div>
                 </div>
             </div>
+            {% for object in doctors %}
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-doctor-area">
+                        <div class="doctor-thumbnail">
+                            <img src="media/{{ object.photo }}" alt="">
+                        </div>
+                        <div class="doctor-meta">
+                            <h5>{{ object.name }}</h5>
+                            <h6>{{ object.speciality }}</h6>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
 
-            <div class="row">
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-doctor-area">
-                        <div class="doctor-thumbnail">
-                            <img src="img/bg-img/d1.jpg" alt="">
-                        </div>
-                        <div class="doctor-meta">
-                            <h5>Dr. Melissa Smith</h5>
-                            <h6>Cardiologist</h6>
-                            <div class="doctor-social-info">
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-doctor-area">
-                        <div class="doctor-thumbnail">
-                            <img src="img/bg-img/d2.jpg" alt="">
-                        </div>
-                        <div class="doctor-meta">
-                            <h5>Dr. Josh Henderson</h5>
-                            <h6>Plastic Surgeon</h6>
-                            <div class="doctor-social-info">
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-doctor-area">
-                        <div class="doctor-thumbnail">
-                            <img src="img/bg-img/d3.jpg" alt="">
-                        </div>
-                        <div class="doctor-meta">
-                            <h5>Dr. Christinne Jones</h5>
-                            <h6>Pediatrist</h6>
-                            <div class="doctor-social-info">
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-doctor-area">
-                        <div class="doctor-thumbnail">
-                            <img src="img/bg-img/d4.jpg" alt="">
-                        </div>
-                        <div class="doctor-meta">
-                            <h5>Dr. William Stan</h5>
-                            <h6>General Practicioner</h6>
-                            <div class="doctor-social-info">
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -305,7 +242,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section_heading white-heading">
-                        <img src="img/icons/stethoscope.png" alt="">
+                        <img src="{% static 'img/icons/stethoscope.png' %}" alt="">
                         <h2>Clients Testimonials</h2>
                     </div>
                 </div>
@@ -323,7 +260,7 @@
                                 tristique nibh. Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor
                                 sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque. ”</h6>
                             <div class="testimonial-given-author-info">
-                                <img src="img/bg-img/testimonials2.jpg" alt="">
+                                <img src="{% static 'img/bg-img/testimonials2.jpg' %}" alt="">
                                 <h6>Julia Smith</h6>
                                 <p>Pacient</p>
                             </div>
@@ -341,7 +278,7 @@
                                 tristique nibh. Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor
                                 sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque. ”</h6>
                             <div class="testimonial-given-author-info">
-                                <img src="img/bg-img/testimonials2.jpg" alt="">
+                                <img src="{% static 'img/bg-img/testimonials2.jpg' %}" alt="">
                                 <h6>Julia Smith</h6>
                                 <p>Pacient</p>
                             </div>
@@ -359,7 +296,7 @@
                                 tristique nibh. Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor
                                 sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque. ”</h6>
                             <div class="testimonial-given-author-info">
-                                <img src="img/bg-img/testimonials2.jpg" alt="">
+                                <img src="{% static 'img/bg-img/testimonials2.jpg' %}" alt="">
                                 <h6>Julia Smith</h6>
                                 <p>Pacient</p>
                             </div>
@@ -424,65 +361,16 @@
                     <div class="medica-appointment-card">
                         <h5>Book an apppointment</h5>
 
-                        <form action="#" method="post">
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control text-white" name="name"
-                                               id="appointmentName" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                        <select class="form-control" id="speciality">
-                                            <option>Speciality 1</option>
-                                            <option>Speciality 2</option>
-                                            <option>Speciality 3</option>
-                                            <option>Speciality 4</option>
-                                            <option>Speciality 5</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="number" id="appointmentNumber"
-                                               placeholder="Phone">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                        <select class="form-control" id="doctors">
-                                            <option>Dr. Riyadh Khan</option>
-                                            <option>Dr. Kumkum Rashid</option>
-                                            <option>Dr. Lim Sarah</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" name="email" id="appointmentEmail"
-                                               placeholder="E-mail">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                        <input type="date" class="form-control" name="date" id="date">
-                                    </div>
-                                </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn medica-btn mt-15">Make an Appointment</button>
+                                    <button type="submit" class="btn medica-btn mt-15"><a href="{% url 'smo:apppointment' %}">Make an Appointment</a></button>
                                 </div>
-                            </div>
-                        </form>
+
                     </div>
                 </div>
 
                 <div class="col-12 col-lg-6">
                     <div class="medica-appointment-thumb">
-                        <img src="img/bg-img/medical1.png" alt="">
+                        <img src="{% static 'img/bg-img/medical1.png' %}" alt="">
                     </div>
                 </div>
             </div>
